@@ -8,7 +8,7 @@ def generate_software(project_name, description, model="gpt-4o-mini"):
         raise ValueError("Missing OpenAI API key. Set it as an environment variable: OPENAI_API_KEY")
     client = openai.OpenAI(api_key=api_key)
     prompt = f"""
-    You are an AI software generator. Generate a simple {project_name} project based on the following description:
+    You are an AI software generator. Generate a simple {project_name} project in python based on the following description:
     {description}
     """
     response = client.chat.completions.create(
